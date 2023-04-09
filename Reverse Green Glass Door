@@ -1,0 +1,35 @@
+word = input("Enter a word to test if it will go through the reverse green glass door: ")
+def no_repeats(word):
+    if len(word) == 0: # len() is a built in python function that returns the length of an object
+        return # exit out of the function
+    else:
+        if word[0] not in l: # checking character at an index / represents character at index 0 
+            l.append(word[0])
+            # here you are using indexing     
+        no_repeats(word[1:]) #slicing 
+        return l
+
+l = [] # "l" stands for list - I set "l" = to an empty list
+# m = no_repeats(" ") # If you want to directly enter a word / pass word as an argument enter it between the (" ")
+# print(m)
+
+z = no_repeats(word)
+print(" ")
+print(z)
+
+def rev_ggd(word):
+ 
+    for i in word:
+        if word.count(i) > 1:
+            return False
+            return
+    return True
+
+def works():
+    rev_ggd(word)
+    if rev_ggd(word) == False:
+        print("\nThis word does NOT go through the reverse green glass door.")
+    if rev_ggd(word) == True:
+        print("\nThis word DOES go through the reverse green glass door.")
+print(rev_ggd(word))
+print(works())
